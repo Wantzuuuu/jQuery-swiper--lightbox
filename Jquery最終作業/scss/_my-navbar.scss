@@ -1,0 +1,103 @@
+$friendly:#00cc99; 
+.my-navbar{
+    position:relative;
+    padding:10px 15px;
+    height:50px;
+    display:flex;
+    color:$friendly;
+    a{
+        align-self: center;
+    }
+    .hamberger-btn{
+        background-color:white;
+        color:$friendly;
+        width:60px;
+        
+    }
+   
+    .hamberger-menu{
+        
+        position: relative;
+        align-self: center;
+        display:flex;
+        a {
+           
+            margin:0 15px;
+            color:$friendly;
+            text-decoration: none;
+        }
+        // navbar-dropdown
+        .navbar-dropdown{
+            position:relative;
+        }
+         // navbar product-menu
+        #product-menu{
+            display:none;
+            z-index:999;
+            width:100px;
+            background:white;
+            padding:15px 10px;
+            position:absolute;
+            top:39px;
+            left:0px;
+            transition:all .5s ease;
+            .product-menu-link{
+                display:block;
+                width:100%;
+                margin:0;
+            }  
+            .product-menu-link:hover{
+                color:white;
+                background-color:grey;
+            }
+        }
+        #product-menu.active{
+            display: block;
+        } 
+        @media(max-width:576px){
+            #product-menu{
+                position: relative;
+                top:0px;
+                padding-left:30px;
+                padding-top:2px;
+            }
+        }
+    }
+    a.active{
+        border-bottom:2px solid  $friendly;
+    }
+    @media(max-width:576px){
+        .hamberger-menu{
+            max-height:0;
+            overflow:hidden;
+            display:flex;
+            flex-direction:column;
+            background-color:white;
+            position:absolute;
+            top:50px;
+            left:0;
+            right:0;
+            z-index: 999;
+            transition:all .7s ease;
+            a {
+                margin:10px;
+                align-self: flex-start;
+                display:block;
+                z-index: 1000;
+                margin:0 15px;
+                color:$friendly;
+                text-decoration: none;
+            }
+            a.active{
+                border-bottom:none;
+            }
+        }
+        .hamberger-menu.show{
+            padding:20px 10px;
+            max-height:400px;
+        }
+
+    }
+   
+   
+} 

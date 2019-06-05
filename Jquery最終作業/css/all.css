@@ -1,0 +1,82 @@
+.my-navbar {
+  position: relative;
+  padding: 10px 15px;
+  height: 50px;
+  display: flex;
+  color: #00cc99; }
+  .my-navbar a {
+    align-self: center; }
+  .my-navbar .hamberger-btn {
+    background-color: white;
+    color: #00cc99;
+    width: 60px; }
+  .my-navbar .hamberger-menu {
+    position: relative;
+    align-self: center;
+    display: flex; }
+    .my-navbar .hamberger-menu a {
+      margin: 0 15px;
+      color: #00cc99;
+      text-decoration: none; }
+    .my-navbar .hamberger-menu .navbar-dropdown {
+      position: relative; }
+    .my-navbar .hamberger-menu #product-menu {
+      display: none;
+      z-index: 999;
+      width: 100px;
+      background: white;
+      padding: 15px 10px;
+      position: absolute;
+      top: 39px;
+      left: 0px;
+      transition: all .5s ease; }
+      .my-navbar .hamberger-menu #product-menu .product-menu-link {
+        display: block;
+        width: 100%;
+        margin: 0; }
+      .my-navbar .hamberger-menu #product-menu .product-menu-link:hover {
+        color: white;
+        background-color: grey; }
+    .my-navbar .hamberger-menu #product-menu.active {
+      display: block; }
+    @media (max-width: 576px) {
+      .my-navbar .hamberger-menu #product-menu {
+        position: relative;
+        top: 0px;
+        padding-left: 30px;
+        padding-top: 2px; } }
+  .my-navbar a.active {
+    border-bottom: 2px solid #00cc99; }
+  @media (max-width: 576px) {
+    .my-navbar .hamberger-menu {
+      max-height: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      transition: all .7s ease; }
+      .my-navbar .hamberger-menu a {
+        margin: 10px;
+        align-self: flex-start;
+        display: block;
+        z-index: 1000;
+        margin: 0 15px;
+        color: #00cc99;
+        text-decoration: none; }
+      .my-navbar .hamberger-menu a.active {
+        border-bottom: none; }
+    .my-navbar .hamberger-menu.show {
+      padding: 20px 10px;
+      max-height: 400px; } }
+
+form.my-form input {
+  width: 100%; }
+
+form.my-form button {
+  color: white;
+  background-color: #00cc99; }

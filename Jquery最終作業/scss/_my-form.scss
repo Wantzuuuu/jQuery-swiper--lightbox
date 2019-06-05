@@ -1,0 +1,10 @@
+$friendly:#00cc99;
+form.my-form{
+    input{
+        width:100%;
+    }
+    button{
+        color:white;
+        background-color:$friendly;
+    }
+}
